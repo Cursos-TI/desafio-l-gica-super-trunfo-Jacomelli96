@@ -1,43 +1,79 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
+    char estadoA[20] = "Amazonas";
+    char carta[20] = "A01";
+    char cidade [20] = "Manaus";
+    float populacao = 400000;
+    float area = 20000000;
+    float pib = 30050; "bilhoes de reais";
+    int turismo = 35;
+    float densidade = populacao / area;
+    float pibpercapita = pib / populacao;
 
+    printf("Carta: %s\n", carta);
+    printf("Estado: %s\n", estadoA);
+    printf("Cidade: %s\n", cidade);
+    printf("População: %.2f\n", populacao);
+    printf("Área: %.2f\n", area);
+    printf("PIB R$: %.2f\n", pib);
+    printf("Pontos Turisticos: %d\n", turismo);
+    printf("Densidade populacional: %.2f\n", densidade);
+    printf("PIB per capita: %.2f\n", pibpercapita);
+
+printf("\n");
+
+    char estadoB[20] = "Ceara";
+    char cartab[20] = "B01";
+    char cidadeb [20] = "Fortaleza";
+    float populacaob = 500000;
+    float areab = 30000000;
+    float pibb = 40080; "bilhoes de reais";
+    int turismob = 65;
+    float densidadeb = populacaob / areab;
+    float pibpercapitab = pibb / populacaob;
+
+    printf("Carta: %s\n", cartab);
+    printf("Estado %s\n", estadoB);
+    printf("Cidade %s\n", cidadeb);
+    printf("População %.2f\n", populacaob);
+    printf("Área %.2f\n", areab);
+    printf("PIB R$: %.2f\n", pibb);
+    printf("Pontos Turisticos %d\n", turismob);
+    printf("Desnsidade populacional: %.2f\n", densidadeb);
+    printf("PIB per capita: %.2f\n", pibpercapitab);
+
+    printf("\n");
+
+    // Comparação de carta a01 contra carta b01 sendo 0 uma afirmação falsa e 1 uma afirmção verdadeira.
     
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+    printf("Manaus é maior que Fortaleza: %d\n", populacao > populacaob);
+    printf("Área de Manaus é maior que a área de Fortaleza: %d\n", area > areab);
+    printf("PIB de Manaus é maior que o PIB de Fortaleza: %d\n", pib > pibb);
+    printf("Manaus tem mais pontos turisticos que Fortaleza: %d\n", turismo > turismob);
+    printf("Manaus tem uma desnsidade populacional maior que Fortaleza: %d\n", densidade < densidadeb);
+    printf("Manaus tem um PIB per capita maior que Fortaleza: %d\n", pibpercapita > pibpercapitab);
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    printf("\n");
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    printf("Comparação de cartas (atributo População): \n");
+    printf("Carta: %s", carta);
+    printf("- Manaus(AM): %.2f\n", populacao);
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
-
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    printf("Carta: %s", cartab); 
+    printf("- Fortaleza (CE): %.2f\n", populacaob);
+    // Utilização de  estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    if (populacao > populacaob){
+        //codigo a ser executado se a condição for verdadeira.
+        printf("Carta A01 é a vencedora. \n");
+    }else{
+        //codigo a ser executado se a condição for falsa.
+        printf("Carta B01 é a vencedora. \n");
+    }
+    {
+        
+    }
+    
 
     return 0;
 }
